@@ -1,0 +1,2027 @@
+/* ===================================================================
+   Cup2Eat - Eat Your Drink | Official Website Stylesheet
+   Theme: Unified Single Background Canvas Across Entire Website
+   Colors Applied To: Floating Mountain Navbar, Headings, Accents & Elements
+   (Deep Forest Emerald Green #0A2417 & Antique Warm Gold #C89D66)
+   No Section Breakpoint Bands / Fully Responsive on All Devices
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+
+:root {
+  /* Unified Seamless Background for Whole Website (No Breakpoint Bands) */
+  --c2e-bg-unified: #faf8f5;         /* Elegant warm artisanal linen background */
+
+  /* Exact Cup2Eat Logo Green Palette (For Navbar, Headings & Key Accents) */
+  --c2e-green-deepest: #07170f;       /* Deepest black-green from logo vignette */
+  --c2e-green-dark: #0a2417;          /* Signature deep forest emerald for ALL main headings */
+  --c2e-green-primary: #103322;       /* Rich forest jade green */
+  --c2e-green-accent: #17452e;        /* Deep pine accent */
+  --c2e-green-soft: #e3ede6;          /* Clean soft sage tint for subtle tags */
+
+  /* Exact Cup2Eat Logo Gold & Bronze Palette (For Taglines, Highlights, Buttons & Badges) */
+  --c2e-gold-deep: #a07436;           /* Deep antique bronze/gold */
+  --c2e-gold-primary: #c89d66;        /* Signature warm gold from CUP 2 EAT letters & rings */
+  --c2e-gold-rich: #d8ab70;          /* Polished highlight gold */
+  --c2e-gold-light: #f5eedf;         /* Champagne cream */
+  --c2e-gold-glow: rgba(200, 157, 102, 0.35);
+
+  /* Surface & Border Grounded Colors */
+  --c2e-surface-card: #ffffff;        /* Crisp white card surface */
+  --c2e-border-grounded: #e5ded2;     /* Grounded subtle border */
+  --c2e-border-gold: rgba(200, 157, 102, 0.45);
+  --c2e-shadow-subtle: 0 4px 16px rgba(10, 36, 23, 0.05);
+
+  /* Typography Colors */
+  --c2e-text-dark: #0a2417;          /* Deep emerald black heading text */
+  --c2e-text-body: #2d3b33;          /* High-readability dark charcoal body */
+  --c2e-text-muted: #5e6f65;         /* Refined neutral muted text */
+  --c2e-text-gold: #c89d66;          /* Warm logo gold accent text */
+
+  /* Fonts */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hand: 'Caveat', cursive;
+
+  --transition-smooth: all 0.25s ease-in-out;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+/* The entire website shares this ONE consistent, uninterrupted background with subtle botanical tea & grain watermark */
+body {
+  font-family: var(--font-body);
+  background-color: var(--c2e-bg-unified);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(200, 157, 102, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(10, 36, 23, 0.03) 0%, transparent 45%),
+    url('../images/botanical-bg-pattern.svg');
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: 800px 800px, 800px 800px, 440px 440px;
+  background-attachment: fixed;
+  color: var(--c2e-text-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Headings use the logo's deep forest emerald green */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--c2e-green-dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.heading-gold-accent {
+  color: var(--c2e-gold-primary);
+}
+
+.handwritten {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  color: var(--c2e-gold-primary);
+  font-size: 1.45rem;
+}
+
+/* ===================================================================
+   Mountain Floating Navbar
+   - At top: Full continuous sculpted pill navbar with 10-20px gap from sides
+   - When scrolled (matching hand drawing):
+     * Left side: Floating island badge with business logo
+     * Right side: Compressed form of all links (toggle button)
+     * Middle: Clean, unobstructed open view
+     * On click: Smoothly expands navbar TO THE LEFT with animated links
+   =================================================================== */
+.mountain-navbar-wrapper {
+  position: fixed;
+  top: 14px;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  padding: 0 16px; /* Gap of 16px from left and right */
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mountain-navbar {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 1240px;
+  background: rgba(10, 36, 23, 0.94); /* Logo deep forest emerald */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid var(--c2e-border-gold);
+  border-radius: 50px;
+  padding: 8px 22px;
+  box-shadow: 0 10px 25px rgba(7, 23, 15, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Brand Logo in Navbar */
+.brand-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 12px;
+  border-radius: 50px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar-logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--c2e-gold-primary);
+  box-shadow: 0 0 10px rgba(200, 157, 102, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.brand-container:hover .navbar-logo-img {
+  transform: rotate(8deg) scale(1.05);
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.brand-title span {
+  color: var(--c2e-gold-rich);
+}
+
+.brand-sub {
+  color: var(--c2e-gold-light);
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+/* Navigation Links Container */
+.nav-expandable-wrap {
+  display: flex;
+  align-items: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-links-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 22px;
+}
+
+.nav-item-link {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: var(--transition-smooth);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-item-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--c2e-gold-primary);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.nav-item-link:hover,
+.nav-item-link.active {
+  color: var(--c2e-gold-rich);
+}
+
+.nav-item-link:hover::after,
+.nav-item-link.active::after {
+  width: 100%;
+}
+
+.scrolled-cta-li {
+  display: none; /* Only visible when expanded in scrolled mode */
+}
+
+/* Navbar Action Buttons */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.btn-eco-outline {
+  color: var(--c2e-gold-rich);
+  border: 1.5px solid var(--c2e-gold-primary);
+  background: transparent;
+  padding: 7px 16px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-eco-outline:hover {
+  background: var(--c2e-gold-primary);
+  color: var(--c2e-green-deepest);
+  border-color: var(--c2e-gold-rich);
+}
+
+.btn-eco-solid {
+  background: linear-gradient(135deg, var(--c2e-gold-rich) 0%, var(--c2e-gold-deep) 100%);
+  color: var(--c2e-green-deepest);
+  border: 1px solid var(--c2e-gold-rich);
+  padding: 7px 18px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-eco-solid:hover {
+  background: linear-gradient(135deg, #e5c088 0%, var(--c2e-gold-rich) 100%);
+  color: #000000;
+  box-shadow: 0 0 14px var(--c2e-gold-glow);
+}
+
+/* Scrolled Compressed Toggle Button (Hidden at top position) */
+.scrolled-menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: rgba(7, 23, 15, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid var(--c2e-gold-primary);
+  border-radius: 50px;
+  padding: 8px 18px;
+  color: var(--c2e-gold-rich);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
+  pointer-events: auto;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.scrolled-menu-toggle:hover {
+  background: rgba(14, 45, 30, 0.98);
+  border-color: var(--c2e-gold-rich);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px var(--c2e-gold-glow);
+}
+
+/* Animated 3-Bar Hamburger to X */
+.toggle-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 18px;
+  height: 14px;
+}
+
+.ham-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--c2e-gold-rich);
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+/* Mobile Nav Toggle (For mobile top position) */
+.mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* ===================================================================
+   SCROLLED STATE (Matching Hand Drawing)
+   - Left side: Island badge showing business logo
+   - Right side: Compressed toggle button
+   - Center: Empty / Clear view
+   - When toggle clicked: Expands navbar TO THE LEFT with smooth animation
+   =================================================================== */
+.mountain-navbar-wrapper.is-scrolled {
+  padding: 0 clamp(16px, 2.5vw, 32px);
+  top: 16px;
+}
+
+.mountain-navbar-wrapper.is-scrolled .mountain-navbar {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left part: Floating Circular Island Badge showing ONLY Business Logo */
+.mountain-navbar-wrapper.is-scrolled .brand-container {
+  width: 88px; /* Increased by 0.5x (+50% larger for prominent laptop visibility) */
+  height: 88px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 23, 15, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2.5px solid var(--c2e-gold-primary);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.42), 0 0 16px rgba(200, 157, 102, 0.3);
+  pointer-events: auto;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.mountain-navbar-wrapper.is-scrolled .brand-container:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 16px 38px var(--c2e-gold-glow), 0 0 24px rgba(200, 157, 102, 0.5);
+  border-color: var(--c2e-gold-rich);
+}
+
+.mountain-navbar-wrapper.is-scrolled .navbar-logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.mountain-navbar-wrapper.is-scrolled .brand-container:hover .navbar-logo-img {
+  transform: rotate(8deg);
+}
+
+/* Hide brand text at scrolled position as requested */
+.mountain-navbar-wrapper.is-scrolled .brand-text-wrap {
+  display: none !important;
+}
+
+/* Right part: Compressed Toggle Button is shown */
+.mountain-navbar-wrapper.is-scrolled .top-only-action {
+  display: none !important;
+}
+
+.mountain-navbar-wrapper.is-scrolled .mobile-nav-toggle {
+  display: none !important;
+}
+
+.mountain-navbar-wrapper.is-scrolled .scrolled-menu-toggle {
+  display: inline-flex !important;
+}
+
+/* Middle/Expandable links in scrolled state:
+   Anchored strictly TO THE LEFT of the toggle button */
+.mountain-navbar-wrapper.is-scrolled .nav-expandable-wrap {
+  position: absolute;
+  right: 125px; /* Immediately to the left of the toggle button */
+  top: 50%;
+  transform: translateY(-50%) translateX(25px) scale(0.96);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: rgba(7, 23, 15, 0.97);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1.5px solid var(--c2e-gold-primary);
+  border-radius: 50px;
+  padding: 7px 22px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.48);
+  white-space: nowrap;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
+  z-index: 1060;
+}
+
+/* Smooth expansion TO THE LEFT when user clicks toggle button */
+.mountain-navbar-wrapper.is-scrolled.nav-expanded .nav-expandable-wrap {
+  transform: translateY(-50%) translateX(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mountain-navbar-wrapper.is-scrolled .nav-links-list {
+  gap: 18px;
+}
+
+.mountain-navbar-wrapper.is-scrolled .nav-item-link {
+  font-size: 0.88rem;
+  padding: 4px 2px;
+}
+
+.mountain-navbar-wrapper.is-scrolled .scrolled-cta-li {
+  display: inline-flex;
+  margin-left: 8px;
+}
+
+.btn-scrolled-order {
+  padding: 5px 15px !important;
+  font-size: 0.8rem !important;
+  border-radius: 30px !important;
+}
+
+/* Toggle morph into X when expanded */
+.mountain-navbar-wrapper.is-scrolled.nav-expanded .scrolled-menu-toggle {
+  background: rgba(14, 45, 30, 0.98);
+  border-color: var(--c2e-gold-rich);
+  color: #ffffff;
+}
+
+.mountain-navbar-wrapper.is-scrolled.nav-expanded .ham-top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mountain-navbar-wrapper.is-scrolled.nav-expanded .ham-mid {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mountain-navbar-wrapper.is-scrolled.nav-expanded .ham-bot {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile Nav Menu Drawer */
+.mobile-nav-drawer {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 16px;
+  right: 16px;
+  background: rgba(10, 36, 23, 0.98);
+  backdrop-filter: blur(25px);
+  border: 1.5px solid var(--c2e-gold-primary);
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 1040;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.mobile-nav-drawer.open {
+  display: block;
+  animation: slideDown 0.25s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-list a:hover {
+  color: var(--c2e-gold-rich);
+}
+
+/* ===================================================================
+   Hero Section (Unified Seamless Background)
+   Colors in Headings, Accents & Visuals
+   =================================================================== */
+.hero-section {
+  position: relative;
+  background: transparent; /* Same background as whole website */
+  padding-top: clamp(80px, 11vh, 105px);
+  padding-bottom: clamp(30px, 5vh, 45px);
+  overflow: hidden;
+}
+
+/* Authentic Botanical Tea Foliage - Rich, Clear Colors in Background of Text */
+.hero-botanical-accent {
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  width: clamp(160px, 18vw, 240px);
+  pointer-events: none;
+  z-index: 0; /* Strictly BEHIND text */
+  opacity: 1; /* Clear, rich, vibrant leaf colors as requested (no washed out fade) */
+  transform: rotate(-5deg);
+  transition: opacity 0.3s ease;
+}
+
+.botanical-leaves-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(10, 36, 23, 0.12));
+}
+
+/* Foreground text column ensures 100% crisp legibility above leaves */
+.hero-text-col {
+  position: relative;
+  z-index: 10;
+}
+
+/* Clean Pill Badge (Sits proudly in foreground) */
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1.5px solid var(--c2e-border-gold);
+  color: var(--c2e-green-dark);
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(10, 36, 23, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.hero-pill-badge .fssai-indicator {
+  background: var(--c2e-green-dark);
+  color: var(--c2e-gold-rich);
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+/* Main Hero Typography (Crisp and readable on top of background leaves) */
+.hero-main-title {
+  font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+  font-weight: 800;
+  color: var(--c2e-green-dark); /* Logo deep forest emerald */
+  line-height: 1.12;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 0 18px rgba(250, 248, 245, 0.98), 0 0 8px #faf8f5, 0 1px 2px rgba(250, 248, 245, 0.9);
+}
+
+.hero-gold-text {
+  color: var(--c2e-gold-primary);
+}
+
+.hero-tagline-sub {
+  font-family: var(--font-hand);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  color: var(--c2e-gold-primary); /* Logo signature gold */
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+  color: var(--c2e-text-body);
+  max-width: 520px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.hero-description strong {
+  color: var(--c2e-green-dark);
+}
+
+/* In-Flow Feature Tags (Firmly Grounded) */
+.hero-feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.hero-tag {
+  background: #ffffff;
+  border: 1.5px solid var(--c2e-border-grounded);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c2e-green-dark);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: var(--c2e-shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.hero-tag:hover {
+  border-color: var(--c2e-gold-primary);
+  background: #fffdf9;
+}
+
+.hero-tag i {
+  color: var(--c2e-gold-primary);
+  font-size: 0.95rem;
+}
+
+/* Hero CTA Group */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.btn-primary-cup {
+  background: linear-gradient(135deg, var(--c2e-green-dark) 0%, var(--c2e-green-deepest) 100%);
+  color: var(--c2e-gold-light);
+  border: 1.5px solid var(--c2e-gold-primary);
+  padding: 11px 26px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary-cup:hover {
+  background: linear-gradient(135deg, var(--c2e-green-primary) 0%, var(--c2e-green-dark) 100%);
+  color: #ffffff;
+  border-color: var(--c2e-gold-rich);
+}
+
+.btn-secondary-cup {
+  background: #ffffff;
+  color: var(--c2e-green-dark);
+  border: 1.5px solid var(--c2e-green-dark);
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.btn-secondary-cup:hover {
+  background: var(--c2e-green-soft);
+  border-color: var(--c2e-green-dark);
+  color: var(--c2e-green-dark);
+}
+
+/* Hero Stats Row */
+.hero-stats-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.5vw, 26px);
+  padding-top: 16px;
+  border-top: 1.5px solid var(--c2e-border-grounded);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+  font-weight: 800;
+  color: var(--c2e-green-dark);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--c2e-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Hero Visual Showcase */
+.hero-visual-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-emblem-pedestal {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(300px, 38vw, 430px);
+  height: clamp(300px, 38vw, 430px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 157, 102, 0.2) 0%, rgba(10, 36, 23, 0.05) 60%, transparent 72%);
+  border: 1.5px dashed rgba(200, 157, 102, 0.35);
+  z-index: 1;
+}
+
+.hero-cup-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-cup-img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  /* Substantial, appetizing scale for prominent laptop and desktop showcase */
+  max-height: clamp(300px, 42vh, 420px);
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgba(10, 36, 23, 0.16));
+  transition: transform 0.3s ease;
+}
+
+.hero-cup-img:hover {
+  transform: scale(1.02);
+}
+
+/* ===================================================================
+   Realistic Living Hot Tea Steam
+   (Released strictly from the hot tea liquid surface INSIDE the cup)
+   =================================================================== */
+.tea-steam-system {
+  position: absolute;
+  /* Anchored at bottom: 74% of cup container - EXACTLY on the tea liquid surface inside the cup */
+  bottom: 74%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(190px, 22vw, 250px);
+  height: clamp(220px, 26vw, 290px);
+  pointer-events: none;
+  z-index: 5;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tea-steam-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: blur(1.5px);
+  opacity: 0.92;
+}
+
+.tea-steam-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.steam-wisp {
+  fill: none;
+  filter: blur(4px);
+  transform-origin: center bottom;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.wisp-1 {
+  animation: teaWispRise1 3.5s infinite cubic-bezier(0.35, 0, 0.25, 1);
+  animation-delay: 0s;
+}
+
+.wisp-2 {
+  animation: teaWispRise2 4.0s infinite cubic-bezier(0.35, 0, 0.25, 1);
+  animation-delay: 0.9s;
+}
+
+.wisp-3 {
+  animation: teaWispRise3 3.3s infinite cubic-bezier(0.35, 0, 0.25, 1);
+  animation-delay: 1.8s;
+}
+
+.wisp-4 {
+  animation: teaWispRise4 4.3s infinite cubic-bezier(0.35, 0, 0.25, 1);
+  animation-delay: 2.6s;
+}
+
+@keyframes teaWispRise1 {
+  0% {
+    transform: translateY(0px) scaleX(0.7) scaleY(0.7) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateY(-55px) scaleX(1.3) scaleY(1.1) rotate(-5deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-120px) scaleX(2.1) scaleY(1.4) rotate(-9deg);
+    opacity: 0;
+  }
+}
+
+@keyframes teaWispRise2 {
+  0% {
+    transform: translateY(0px) scaleX(0.75) scaleY(0.7) rotate(0deg);
+    opacity: 0;
+  }
+  28% {
+    opacity: 0.8;
+  }
+  65% {
+    transform: translateY(-60px) scaleX(1.4) scaleY(1.15) rotate(6deg);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(-130px) scaleX(2.4) scaleY(1.5) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+@keyframes teaWispRise3 {
+  0% {
+    transform: translateY(0px) scaleX(0.7) scaleY(0.7) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.65;
+  }
+  60% {
+    transform: translateY(-50px) scaleX(1.3) scaleY(1.1) rotate(5deg);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-115px) scaleX(2.0) scaleY(1.35) rotate(8deg);
+    opacity: 0;
+  }
+}
+
+@keyframes teaWispRise4 {
+  0% {
+    transform: translateY(0px) scaleX(0.65) scaleY(0.65) rotate(0deg);
+    opacity: 0;
+  }
+  32% {
+    opacity: 0.68;
+  }
+  70% {
+    transform: translateY(-65px) scaleX(1.5) scaleY(1.2) rotate(-6deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-125px) scaleX(2.2) scaleY(1.45) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+/* Compact Grounded Specs Bar (Firmly anchored on unified background) */
+.hero-grounded-specs {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border: 1.5px solid var(--c2e-border-gold);
+  border-radius: 14px;
+  padding: 10px 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  z-index: 4;
+  margin-top: 14px;
+  box-shadow: var(--c2e-shadow-subtle);
+}
+
+.spec-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-right: 1px solid var(--c2e-border-grounded);
+  padding-right: 6px;
+}
+
+.spec-cell:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.spec-cell i {
+  font-size: 1.15rem;
+  color: var(--c2e-gold-primary);
+  flex-shrink: 0;
+}
+
+.spec-cell strong {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--c2e-green-dark);
+  line-height: 1.15;
+}
+
+.spec-cell span {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--c2e-text-muted);
+}
+
+/* ===================================================================
+   Continuous Eco Marquee Ribbon (Seamless Accent Flow)
+   =================================================================== */
+.eco-marquee-section {
+  background: transparent; /* Same unified background */
+  color: var(--c2e-green-dark);
+  padding: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  border-top: 1.5px solid var(--c2e-border-gold);
+  border-bottom: 1.5px solid var(--c2e-border-gold);
+}
+
+.marquee-track {
+  display: inline-flex;
+  gap: 40px;
+  animation: scrollMarquee 26s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--c2e-green-dark);
+}
+
+.marquee-item span.highlight {
+  color: var(--c2e-gold-primary);
+}
+
+.marquee-dot {
+  color: var(--c2e-gold-primary);
+  font-size: 0.7rem;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===================================================================
+   Common Section Styles (All on Unified Background)
+   =================================================================== */
+.section-padding {
+  padding: clamp(55px, 7vh, 75px) 0;
+  position: relative;
+  background: transparent; /* Seamless unified background */
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(32px, 4.5vh, 48px);
+}
+
+.section-pretitle {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--c2e-green-dark);
+  background: #ffffff;
+  border: 1.5px solid var(--c2e-border-gold);
+  padding: 4px 14px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+  box-shadow: var(--c2e-shadow-subtle);
+}
+
+.section-heading {
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+  color: var(--c2e-green-dark); /* Logo deep forest emerald */
+  margin-bottom: 12px;
+}
+
+.section-lead {
+  font-size: 1rem;
+  color: var(--c2e-text-muted);
+}
+
+/* ===================================================================
+   How It Works (Grounded Step Cards on Unified Background)
+   =================================================================== */
+.step-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 20px 24px;
+  text-align: center;
+  border: 1.5px solid var(--c2e-border-grounded);
+  transition: var(--transition-smooth);
+  height: 100%;
+  position: relative;
+  box-shadow: var(--c2e-shadow-subtle);
+  overflow: hidden;
+}
+
+.step-card:hover {
+  border-color: var(--c2e-gold-primary);
+  background: #fffdf9;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(10, 36, 23, 0.08);
+}
+
+/* Big 2x watermark number in background of card content */
+.step-number {
+  position: absolute;
+  top: 4px;
+  right: 14px;
+  font-family: var(--font-heading);
+  font-size: clamp(3.4rem, 4.2vw, 4.6rem); /* 2x size increase */
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(200, 157, 102, 0.18); /* Elegant watermark behind text */
+  pointer-events: none;
+  user-select: none;
+  z-index: 0; /* Strictly behind foreground content */
+  transition: all 0.35s ease;
+}
+
+.step-card:hover .step-number {
+  color: rgba(200, 157, 102, 0.32);
+  transform: scale(1.08) translateY(-2px);
+}
+
+.step-icon-wrap,
+.step-title,
+.step-desc {
+  position: relative;
+  z-index: 1; /* Content sits cleanly in foreground above the large background number */
+}
+
+.step-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--c2e-green-soft);
+  border: 1.5px solid var(--c2e-border-grounded);
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--c2e-green-dark);
+  transition: var(--transition-smooth);
+}
+
+.step-card:hover .step-icon-wrap {
+  background: var(--c2e-green-dark);
+  color: var(--c2e-gold-rich);
+  border-color: var(--c2e-gold-primary);
+  transform: scale(1.05);
+}
+
+.step-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--c2e-green-dark);
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--c2e-text-muted);
+  line-height: 1.55;
+}
+
+/* ===================================================================
+   Signature Flavours Section (Seamless Unified Canvas)
+   =================================================================== */
+.flavours-section {
+  background: transparent;
+}
+
+.flavour-filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.flavour-tab-btn {
+  background: #ffffff;
+  border: 1.5px solid var(--c2e-border-grounded);
+  color: var(--c2e-green-dark);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: var(--c2e-shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.flavour-tab-btn:hover,
+.flavour-tab-btn.active {
+  background: var(--c2e-green-dark);
+  color: var(--c2e-gold-light);
+  border-color: var(--c2e-green-dark);
+}
+
+.flavour-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px;
+  border: 1.5px solid var(--c2e-border-grounded);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: var(--transition-smooth);
+  box-shadow: var(--c2e-shadow-subtle);
+}
+
+.flavour-card:hover {
+  border-color: var(--c2e-gold-primary);
+  background: #fffdf9;
+}
+
+.flavour-img-wrap {
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: var(--c2e-bg-unified);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2.5px solid var(--c2e-gold-primary);
+  box-shadow: 0 8px 20px rgba(10, 36, 23, 0.1), 0 0 12px var(--c2e-gold-glow);
+  transition: all 0.35s ease;
+}
+
+.flavour-card:hover .flavour-img-wrap {
+  border-color: var(--c2e-gold-rich);
+  box-shadow: 0 12px 28px rgba(10, 36, 23, 0.15), 0 0 18px var(--c2e-gold-glow);
+}
+
+.flavour-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flavour-card:hover .flavour-img-wrap img {
+  transform: scale(1.08);
+}
+
+.flavour-badge {
+  align-self: center;
+  background: var(--c2e-green-dark);
+  color: var(--c2e-gold-light);
+  border: 1px solid var(--c2e-gold-primary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.flavour-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--c2e-green-dark);
+}
+
+.flavour-taste-note {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--c2e-text-muted);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.flavour-pairings {
+  border-top: 1.5px dashed var(--c2e-border-grounded);
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.flavour-pairings h6 {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  color: var(--c2e-text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.pairing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pairing-tag {
+  background: var(--c2e-bg-unified);
+  color: var(--c2e-green-dark);
+  border: 1px solid var(--c2e-border-grounded);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 10px;
+}
+
+/* ===================================================================
+   Problem vs Solution (Comparison on Unified Background)
+   =================================================================== */
+.comparison-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 45px;
+}
+
+@media (max-width: 768px) {
+  .comparison-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparison-box {
+  border-radius: 18px;
+  padding: 30px;
+  height: 100%;
+}
+
+.comparison-box.bad {
+  background: #fdf5f5;
+  border: 1.5px solid #f2c7c7;
+}
+
+.comparison-box.bad h3 {
+  color: #ad2828;
+}
+
+.comparison-box.good {
+  background: #ffffff;
+  border: 2px solid var(--c2e-green-dark);
+  box-shadow: var(--c2e-shadow-subtle);
+}
+
+.comparison-box.good h3 {
+  color: var(--c2e-green-dark);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+}
+
+.comparison-list li i.bi-x-circle-fill {
+  color: #c53030;
+  font-size: 1.15rem;
+  margin-top: 2px;
+}
+
+.comparison-list li i.bi-check-circle-fill {
+  color: var(--c2e-green-dark);
+  font-size: 1.15rem;
+  margin-top: 2px;
+}
+
+/* Calculator Card */
+.calculator-card {
+  background: var(--c2e-green-dark);
+  color: #ffffff;
+  border-radius: 22px;
+  padding: clamp(24px, 4vw, 36px);
+  border: 2px solid var(--c2e-gold-primary);
+  box-shadow: 0 10px 30px rgba(7, 23, 15, 0.25);
+}
+
+.calc-title {
+  color: #ffffff;
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.calc-lead {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  margin-bottom: 22px;
+}
+
+.calc-slider-wrap {
+  margin-bottom: 24px;
+}
+
+.calc-slider-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.calc-slider-label span.value-highlight {
+  color: var(--c2e-gold-rich);
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+}
+
+.form-range::-webkit-slider-thumb {
+  background: var(--c2e-gold-rich);
+}
+
+.calc-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .calc-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-result-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(200, 157, 102, 0.35);
+  border-radius: 14px;
+  padding: 16px 12px;
+}
+
+.calc-result-val {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--c2e-gold-rich);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.calc-result-box span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.88);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================================================
+   B2B & Cafe Partnerships Section (Seamless Unified Background)
+   =================================================================== */
+.b2b-section {
+  background: transparent; /* No dark band; unified background */
+  padding: clamp(55px, 7vh, 75px) 0;
+}
+
+.b2b-section h2 {
+  color: var(--c2e-green-dark);
+}
+
+.b2b-feature-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.b2b-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--c2e-green-soft);
+  border: 1.5px solid var(--c2e-border-gold);
+  color: var(--c2e-green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.b2b-feature-text h5 {
+  color: var(--c2e-green-dark);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.b2b-feature-text p {
+  color: var(--c2e-text-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.b2b-form-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 34px);
+  border: 2px solid var(--c2e-gold-primary);
+  box-shadow: var(--c2e-shadow-subtle);
+  color: var(--c2e-text-dark);
+}
+
+.b2b-form-card h4 {
+  color: var(--c2e-green-dark);
+  font-size: 1.45rem;
+  margin-bottom: 6px;
+}
+
+.b2b-form-card p {
+  font-size: 0.88rem;
+  color: var(--c2e-text-muted);
+  margin-bottom: 18px;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--c2e-green-dark);
+  margin-bottom: 5px;
+}
+
+.form-control, .form-select {
+  border: 1.5px solid var(--c2e-border-grounded);
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--c2e-gold-primary);
+  box-shadow: 0 0 0 3px rgba(200, 157, 102, 0.25);
+}
+
+/* ===================================================================
+   Instagram & Community Gallery
+   =================================================================== */
+.insta-gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid var(--c2e-border-grounded);
+  aspect-ratio: 1 / 1;
+  background: #e8e2d5;
+  transition: var(--transition-smooth);
+}
+
+.insta-gallery-item:hover {
+  border-color: var(--c2e-gold-primary);
+}
+
+.insta-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.insta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 36, 23, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-smooth);
+  color: #ffffff;
+  padding: 12px;
+  text-align: center;
+}
+
+.insta-gallery-item:hover .insta-overlay {
+  opacity: 1;
+}
+
+.insta-overlay i {
+  font-size: 1.8rem;
+  color: var(--c2e-gold-rich);
+  margin-bottom: 6px;
+}
+
+.insta-overlay span {
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+/* ===================================================================
+   FAQ Accordion (Unified Canvas)
+   =================================================================== */
+.accordion-item {
+  border: 1.5px solid var(--c2e-border-grounded);
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: var(--transition-smooth);
+  box-shadow: var(--c2e-shadow-subtle);
+}
+
+.accordion-item:hover {
+  border-color: var(--c2e-gold-primary);
+}
+
+.accordion-button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--c2e-green-dark);
+  padding: 16px 20px;
+  background: #ffffff;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--c2e-green-soft);
+  color: var(--c2e-green-dark);
+  border-bottom: 1px solid var(--c2e-border-grounded);
+}
+
+.accordion-body {
+  padding: 16px 20px;
+  font-size: 0.92rem;
+  color: var(--c2e-text-body);
+  line-height: 1.6;
+}
+
+/* ===================================================================
+   Footer (Seamless Dark Green Grounding Element)
+   =================================================================== */
+.site-footer {
+  background: var(--c2e-green-dark);
+  color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 25px;
+  border-top: 2px solid var(--c2e-gold-primary);
+  position: relative;
+}
+
+.footer-brand-title {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.footer-brand-title span {
+  color: var(--c2e-gold-rich);
+}
+
+.footer-desc {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  max-width: 320px;
+  margin-bottom: 18px;
+}
+
+.footer-heading {
+  color: var(--c2e-gold-rich);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--c2e-gold-rich);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.footer-contact-item i {
+  color: var(--c2e-gold-rich);
+  font-size: 1.05rem;
+  margin-top: 2px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(200, 157, 102, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: var(--transition-smooth);
+}
+
+.social-icon-btn:hover {
+  background: var(--c2e-gold-primary);
+  color: var(--c2e-green-deepest);
+  border-color: var(--c2e-gold-rich);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Toast Notification */
+.custom-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--c2e-green-dark);
+  color: #ffffff;
+  border: 1.5px solid var(--c2e-gold-primary);
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.35s ease;
+  pointer-events: none;
+}
+
+.custom-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===================================================================
+   Responsive Breakpoints for ALL Devices
+   =================================================================== */
+
+/* Large screens / Desktops */
+@media (min-width: 1200px) {
+  .hero-section {
+    min-height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Laptops & Tablets Landscape (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .mountain-navbar {
+    padding: 7px 18px;
+  }
+  .nav-links-list {
+    gap: 14px;
+  }
+  .nav-item-link {
+    font-size: 0.84rem;
+  }
+  .mountain-navbar-wrapper.is-scrolled .nav-expandable-wrap {
+    right: 115px;
+    padding: 6px 14px;
+  }
+  .mountain-navbar-wrapper.is-scrolled .nav-links-list {
+    gap: 12px;
+  }
+  .mountain-navbar-wrapper.is-scrolled .nav-item-link {
+    font-size: 0.8rem;
+  }
+  .mountain-navbar-wrapper.is-scrolled .brand-sub {
+    display: none;
+  }
+  .hero-cup-img {
+    max-height: 380px;
+    max-width: 380px;
+  }
+  .hero-grounded-specs {
+    max-width: 440px;
+  }
+}
+
+/* Tablets Portrait & Medium Screens (768px to 991px) */
+@media (max-width: 991px) {
+  .nav-expandable-wrap,
+  .navbar-actions .btn-eco-outline {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .mountain-navbar-wrapper.is-scrolled .brand-container {
+    width: 68px;
+    height: 68px;
+  }
+
+  .hero-section {
+    padding-top: 100px;
+    padding-bottom: 35px;
+    text-align: center;
+  }
+
+  .hero-tagline-sub {
+    margin: 0 auto 12px;
+  }
+
+  .hero-description {
+    margin: 0 auto 18px;
+  }
+
+  .hero-feature-tags {
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    justify-content: center;
+  }
+
+  .hero-visual-card {
+    margin-top: 25px;
+  }
+
+  .hero-cup-img {
+    max-height: 320px;
+  }
+
+  .hero-grounded-specs {
+    margin: 14px auto 0;
+  }
+}
+
+/* Mobile Devices (< 768px) */
+@media (max-width: 767px) {
+  .mountain-navbar-wrapper {
+    padding: 0 10px; /* 10px gap on mobile */
+  }
+
+  .mountain-navbar {
+    padding: 7px 14px;
+    border-radius: 40px;
+  }
+
+  .mountain-navbar-wrapper.is-scrolled .brand-container {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .navbar-logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-eco-solid {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .hero-section {
+    padding-top: 85px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .hero-botanical-accent {
+    width: 90px;
+    opacity: 0.85;
+    transform: translate(-8%, -8%);
+  }
+
+  .hero-main-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-tagline-sub {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-feature-tags {
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .hero-tag {
+    font-size: 0.76rem;
+    padding: 5px 10px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary-cup, .btn-secondary-cup {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 18px;
+  }
+
+  .hero-stats-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    text-align: center;
+    padding-top: 14px;
+  }
+
+  .stat-number {
+    font-size: 1.35rem;
+  }
+
+  .hero-visual-card {
+    margin-top: 20px;
+  }
+
+  .hero-cup-img {
+    max-height: 230px;
+  }
+
+  .hero-emblem-pedestal {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-grounded-specs {
+    grid-template-columns: 1fr;
+    text-align: left;
+    max-width: 320px;
+    gap: 6px;
+    padding: 10px 12px;
+  }
+
+  .spec-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--c2e-border-grounded);
+    padding-bottom: 6px;
+  }
+
+  .spec-cell:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .step-card {
+    padding: 22px 16px;
+  }
+
+  .comparison-box {
+    padding: 20px;
+  }
+
+  .b2b-form-card {
+    padding: 22px 18px;
+  }
+}

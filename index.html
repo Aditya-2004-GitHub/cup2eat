@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a2417">
+  <title>Cup2Eat | Eat Your Drink - 100% Edible & Eco-Friendly Beverage Cups</title>
+  <meta name="description" content="Cup2Eat brings you 100% edible, crunchy wafer cups for tea, coffee, and desserts. FSSAI licensed, pure veg, vegan-friendly, leak-proof for 40+ mins. Small sip, big change.">
+  <meta name="keywords" content="Cup2Eat, edible cups, eat your drink, edible tea cups, eco friendly chai cups, biscuit tea cups, zero waste cups, FSSAI licensed edible cups">
+
+  <!-- OpenGraph & Social Cards -->
+  <meta property="og:title" content="Cup2Eat | Eat Your Drink - 100% Edible Wafer Cups">
+  <meta property="og:description" content="Replace single-use paper and plastic cups with 100% edible biscuit cups. Holds boiling hot chai and coffee for 40+ minutes, then crunch the cup!">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       Mountain Floating Navbar
+       - At top: Full continuous sculpted pill navbar with 10-20px gap from sides
+       - When scrolled: Split layout matching hand drawing:
+         * Left: Business logo island badge
+         * Right: Compressed form of all links (toggle button)
+         * On click: Smoothly expands navbar to the left side with active switching
+       =================================================================== -->
+  <div class="mountain-navbar-wrapper" id="mountainNavbarWrapper">
+    <nav class="mountain-navbar" id="mountainNavbar">
+      <!-- Left: Brand Logo (Becomes pinned island badge when scrolled) -->
+      <a href="#hero" class="brand-container" id="brandContainer" title="Cup2Eat - Back to top">
+        <img src="assets/images/logo.png" alt="Cup2Eat Logo" class="navbar-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-title">CUP<span>2</span>EAT</span>
+          <span class="brand-sub">Eat Your Drink</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links Container (At top: center bar; When scrolled: expands to the left of the toggle button) -->
+      <div class="nav-expandable-wrap" id="navExpandableWrap">
+        <ul class="nav-links-list">
+          <li><a href="#concept" class="nav-item-link">How It Works</a></li>
+          <li><a href="#flavours" class="nav-item-link">Flavours</a></li>
+          <li><a href="#why-edible" class="nav-item-link">The Plastic Truth</a></li>
+          <li><a href="#calculator" class="nav-item-link">Impact Calculator</a></li>
+          <li><a href="#b2b" class="nav-item-link">For Cafes & Events</a></li>
+          <li><a href="#faq" class="nav-item-link">FAQs</a></li>
+          <li class="scrolled-cta-li">
+            <a href="#contact" class="btn-eco-solid btn-scrolled-order">
+              <i class="bi bi-whatsapp"></i> Order Now
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Action CTAs & Scrolled Compressed Toggle Button -->
+      <div class="navbar-actions" id="navbarActions">
+        <a href="#b2b" class="btn-eco-outline top-only-action">
+          <i class="bi bi-box-seam"></i> Sample Kit
+        </a>
+        <a href="#contact" class="btn-eco-solid top-only-action">
+          <i class="bi bi-whatsapp"></i> Order Now
+        </a>
+
+        <!-- Compressed Form of All Links (Shown when scrolled in laptop view & mobile) -->
+        <button class="scrolled-menu-toggle" id="scrolledNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="toggle-hamburger" aria-hidden="true">
+            <span class="ham-line ham-top"></span>
+            <span class="ham-line ham-mid"></span>
+            <span class="ham-line ham-bot"></span>
+          </span>
+          <span class="toggle-text">Menu</span>
+        </button>
+
+        <!-- Fallback mobile toggle for unscrolled top on small screens -->
+        <button class="mobile-nav-toggle d-lg-none" aria-label="Toggle mobile menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="#concept"><span>How It Works</span> <i class="bi bi-chevron-right"></i></a></li>
+      <li><a href="#flavours"><span>Our Flavours</span> <i class="bi bi-chevron-right"></i></a></li>
+      <li><a href="#why-edible"><span>The Plastic Truth</span> <i class="bi bi-chevron-right"></i></a></li>
+      <li><a href="#calculator"><span>Waste Calculator</span> <i class="bi bi-chevron-right"></i></a></li>
+      <li><a href="#b2b"><span>Cafes & Wholesale</span> <i class="bi bi-chevron-right"></i></a></li>
+      <li><a href="#faq"><span>FAQs</span> <i class="bi bi-chevron-right"></i></a></li>
+      <li><a href="#contact" class="text-warning"><span>Get Samples & Bulk Pricing</span> <i class="bi bi-arrow-right-circle-fill"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- ===================================================================
+       Hero Section (Built strictly around Cup2Eat Business Logic)
+       =================================================================== -->
+  <section class="hero-section" id="hero">
+    <!-- Subtle Botanical Foliage Framing (Tucked in background, zero text obstruction) -->
+    <div class="hero-botanical-accent" aria-hidden="true">
+      <img src="assets/images/tea-branch.svg" alt="" class="botanical-leaves-img">
+    </div>
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center g-4 g-xl-5">
+        <!-- Left Column: Business Value Proposition -->
+        <div class="col-lg-6 col-xl-7 hero-text-col">
+          <div class="hero-pill-badge">
+            <span>🌿 100% Edible Cups</span>
+            <span class="fssai-indicator">FSSAI LICENSED</span>
+            <span>A Greener Planet</span>
+          </div>
+
+          <h1 class="hero-main-title">
+            Eat Your <span class="hero-gold-text">Drink.</span>
+          </h1>
+          <span class="hero-tagline-sub">Small Sip. Big Change.</span>
+
+          <p class="hero-description">
+            Say goodbye to plastic and paper waste. <strong>Cup2Eat</strong> crafts artisanal, crunchy biscuit cups designed to hold boiling hot chai, coffee, and chilled desserts for <strong>40+ minutes</strong> without leaking. Sip your beverage, then crunch the delicious cup!
+          </p>
+
+          <!-- In-Flow Feature Tags (NOT floating badges) -->
+          <div class="hero-feature-tags">
+            <div class="hero-tag">
+              <i class="bi bi-clock-history"></i>
+              <span>40+ Min Leak-Proof</span>
+            </div>
+            <div class="hero-tag">
+              <i class="bi bi-cookie"></i>
+              <span>100% Edible & Crunchy</span>
+            </div>
+            <div class="hero-tag">
+              <i class="bi bi-patch-check-fill"></i>
+              <span>Pure Veg & Vegan</span>
+            </div>
+            <div class="hero-tag">
+              <i class="bi bi-recycle"></i>
+              <span>0% Plastic / Paper Waste</span>
+            </div>
+          </div>
+
+          <!-- Hero CTA Actions -->
+          <div class="hero-cta-group">
+            <a href="#flavours" class="btn-primary-cup">
+              <i class="bi bi-cup-hot-fill"></i> Explore 4 Flavours
+            </a>
+            <a href="#b2b" class="btn-secondary-cup">
+              <i class="bi bi-shop"></i> Cafe & Bulk Supply
+            </a>
+          </div>
+
+          <!-- Hero Trust Metrics / Banner Stats -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">500k+</span>
+              <span class="stat-label">Cups Saved</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Real Flavours</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">40+ Min</span>
+              <span class="stat-label">Heat Resistant</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Zero Landfill</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Showcase (Generous, Appetizing Scale) -->
+        <div class="col-lg-6 col-xl-5 hero-visual-col">
+          <div class="hero-visual-card">
+            <!-- Grounded Circular Pedestal Emblem (Logo Theme) -->
+            <div class="hero-emblem-pedestal"></div>
+
+            <!-- Main Edible Cup Image (No Background / Pure Transparent) -->
+            <div class="hero-cup-container">
+              <!-- Living Steam Released Directly from the Hot Tea Surface Inside Cup -->
+              <div class="tea-steam-system" id="teaSteamSystem" aria-hidden="true">
+                <canvas id="teaSteamCanvas" width="240" height="260" class="tea-steam-canvas"></canvas>
+                <svg class="tea-steam-svg" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Swirling organic steam wisps rising strictly from tea surface -->
+                  <path class="steam-wisp wisp-1" d="M 80,220 Q 60,165 92,105 T 68,25" stroke="url(#teaSteamGrad1)" stroke-width="7" stroke-linecap="round"/>
+                  <path class="steam-wisp wisp-2" d="M 100,222 Q 122,170 86,110 T 108,18" stroke="url(#teaSteamGrad2)" stroke-width="8.5" stroke-linecap="round"/>
+                  <path class="steam-wisp wisp-3" d="M 120,220 Q 138,168 104,102 T 126,28" stroke="url(#teaSteamGrad1)" stroke-width="6.5" stroke-linecap="round"/>
+                  <path class="steam-wisp wisp-4" d="M 92,223 Q 76,172 110,118 T 90,32" stroke="url(#teaSteamGrad3)" stroke-width="6" stroke-linecap="round"/>
+                  <defs>
+                    <linearGradient id="teaSteamGrad1" x1="0" y1="1" x2="0" y2="0">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.55"/>
+                      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.25"/>
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="teaSteamGrad2" x1="0" y1="1" x2="0" y2="0">
+                      <stop offset="0%" stop-color="#fffbf5" stop-opacity="0"/>
+                      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.7"/>
+                      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="teaSteamGrad3" x1="0" y1="1" x2="0" y2="0">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.45"/>
+                      <stop offset="80%" stop-color="#ffffff" stop-opacity="0.15"/>
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              
+              <img src="assets/images/hero-cup.png" alt="Cup2Eat Edible Chai Cup with Chocolate Rim" class="hero-cup-img">
+            </div>
+
+            <!-- Grounded Specs Bar (Anchored Under Cup, NOT Floating) -->
+            <div class="hero-grounded-specs">
+              <div class="spec-cell">
+                <i class="bi bi-thermometer-high"></i>
+                <div>
+                  <strong>Holds Up To 95°C</strong>
+                  <span>Boiling Chai & Coffee</span>
+                </div>
+              </div>
+              <div class="spec-cell">
+                <i class="bi bi-stars"></i>
+                <div>
+                  <strong>Waffle Biscuit Base</strong>
+                  <span>Dark Chocolate Rim</span>
+                </div>
+              </div>
+              <div class="spec-cell">
+                <i class="bi bi-clock-history"></i>
+                <div>
+                  <strong>40+ Mins Firm</strong>
+                  <span>Zero Soggy Residue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Continuous Eco Marquee Ribbon
+       =================================================================== -->
+  <div class="eco-marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="highlight">EAT YOUR DRINK</span> <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">SMALL SIP. BIG CHANGE <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">100% EDIBLE WAFER CUPS <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item"><span class="highlight">FSSAI LICENSED</span> <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">PURE VEG & VEGAN FRIENDLY <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">40+ MINS LEAK PROOF <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">SAY NO TO PLASTIC <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item"><span class="highlight">ZERO PAPER WASTE</span> <i class="bi bi-dot marquee-dot"></i></div>
+      <!-- Loop duplicate for seamless continuous animation -->
+      <div class="marquee-item"><span class="highlight">EAT YOUR DRINK</span> <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">SMALL SIP. BIG CHANGE <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">100% EDIBLE WAFER CUPS <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item"><span class="highlight">FSSAI LICENSED</span> <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">PURE VEG & VEGAN FRIENDLY <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">40+ MINS LEAK PROOF <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item">SAY NO TO PLASTIC <i class="bi bi-dot marquee-dot"></i></div>
+      <div class="marquee-item"><span class="highlight">ZERO PAPER WASTE</span> <i class="bi bi-dot marquee-dot"></i></div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       How It Works - The 4-Step Experience
+       =================================================================== -->
+  <section class="section-padding" id="concept">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">The Experience</span>
+        <h2 class="section-heading">How Does An Edible Cup Work?</h2>
+        <p class="section-lead">A seamless, delicious ritual that replaces single-use waste with pure delight in four simple steps.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <div class="step-icon-wrap">
+              <i class="bi bi-cup-straw"></i>
+            </div>
+            <h4 class="step-title">Pour Your Drink</h4>
+            <p class="step-desc">
+              Pour steaming hot Indian chai, fresh espresso, cappuccino, or cold ice creams and puddings straight into the cup.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <div class="step-icon-wrap">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h4 class="step-title">Sip at Your Pace</h4>
+            <p class="step-desc">
+              Enjoy your drink leisurely. Our food-grade natural barrier keeps the cup 100% leak-proof and crunchy for <strong>40+ minutes</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <div class="step-icon-wrap">
+              <i class="bi bi-emoji-smile"></i>
+            </div>
+            <h4 class="step-title">Crunch & Eat It!</h4>
+            <p class="step-desc">
+              When your drink is finished, don't toss a disposable cup into the trash—eat it! It tastes like a delicious, freshly baked cookie biscuit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <span class="step-number">4</span>
+            <div class="step-icon-wrap">
+              <i class="bi bi-tree-fill"></i>
+            </div>
+            <h4 class="step-title">100% Zero Waste</h4>
+            <p class="step-desc">
+              Zero plastic, zero microplastics in hot beverages, zero landfill pollution. Even if discarded, it naturally biodegrades in days.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Signature Flavours Showcase (Directly from Brand Banner)
+       =================================================================== -->
+  <section class="section-padding flavours-section" id="flavours">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">Crafted With Real Flavours</span>
+        <h2 class="section-heading">Explore Our 4 Signature Flavours</h2>
+        <p class="section-lead">
+          Infused with natural ingredients and gourmet aromatics to turn every tea and coffee moment into a multisensory treat.
+        </p>
+      </div>
+
+      <!-- Interactive Flavour Filter Tabs -->
+      <div class="flavour-filter-tabs">
+        <button type="button" class="flavour-tab-btn active" data-filter="all">All 4 Flavours</button>
+        <button type="button" class="flavour-tab-btn" data-filter="chai">Chai Special (Elaichi)</button>
+        <button type="button" class="flavour-tab-btn" data-filter="coffee">Coffee Pairings</button>
+        <button type="button" class="flavour-tab-btn" data-filter="indulgence">Double Chocolate</button>
+      </div>
+
+      <div class="row g-4">
+        <!-- Flavour 1: Royal Elaichi -->
+        <div class="col-md-6 col-lg-3 flavour-col" data-category="traditional chai">
+          <div class="flavour-card">
+            <div class="flavour-img-wrap">
+              <img src="assets/images/flavour-elaichi.jpg" alt="Cup2Eat Elaichi Flavour">
+            </div>
+            <span class="flavour-badge">Best For Masala Chai</span>
+            <h4 class="flavour-title">Royal Elaichi</h4>
+            <p class="flavour-taste-note">
+              Infused with natural crushed green cardamom. Infuses sweet herbal notes into every sip of hot tea and ends with a fragrant, soothing crunch.
+            </p>
+            <div class="flavour-pairings">
+              <h6>Ideal Pairings:</h6>
+              <div class="pairing-tags">
+                <span class="pairing-tag">Adrak Chai</span>
+                <span class="pairing-tag">Karak Chai</span>
+                <span class="pairing-tag">Kulfi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavour 2: Classic Chocolate -->
+        <div class="col-md-6 col-lg-3 flavour-col" data-category="dessert coffee">
+          <div class="flavour-card">
+            <div class="flavour-img-wrap">
+              <img src="assets/images/flavour-chocolate.jpg" alt="Cup2Eat Chocolate Flavour">
+            </div>
+            <span class="flavour-badge">Customer Favorite</span>
+            <h4 class="flavour-title">Chocolate</h4>
+            <p class="flavour-taste-note">
+              Rich natural cocoa blended into the crispy wafer dough. As hot beverage warms the cup, a subtle chocolate aroma enriches your entire drink.
+            </p>
+            <div class="flavour-pairings">
+              <h6>Ideal Pairings:</h6>
+              <div class="pairing-tags">
+                <span class="pairing-tag">Cappuccino</span>
+                <span class="pairing-tag">Hot Chocolate</span>
+                <span class="pairing-tag">Mocha</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavour 3: Bourbon Vanilla -->
+        <div class="col-md-6 col-lg-3 flavour-col" data-category="classic coffee">
+          <div class="flavour-card">
+            <div class="flavour-img-wrap">
+              <img src="assets/images/flavour-vanilla.jpg" alt="Cup2Eat Vanilla Flavour">
+            </div>
+            <span class="flavour-badge">Smooth & Aromatic</span>
+            <h4 class="flavour-title">Vanilla</h4>
+            <p class="flavour-taste-note">
+              Warm, delicate vanilla notes reminiscent of gourmet French patisserie. Perfectly harmonizes with dark roasts and milk-based desserts.
+            </p>
+            <div class="flavour-pairings">
+              <h6>Ideal Pairings:</h6>
+              <div class="pairing-tags">
+                <span class="pairing-tag">Filter Coffee</span>
+                <span class="pairing-tag">Latte</span>
+                <span class="pairing-tag">Vanilla Sundae</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavour 4: Chocolate Coated -->
+        <div class="col-md-6 col-lg-3 flavour-col" data-category="premium indulgence">
+          <div class="flavour-card">
+            <div class="flavour-img-wrap">
+              <img src="assets/images/flavour-chocolate-coated.jpg" alt="Cup2Eat Chocolate Coated Flavour">
+            </div>
+            <span class="flavour-badge">Premium Gourmet</span>
+            <h4 class="flavour-title">Chocolate Coated</h4>
+            <p class="flavour-taste-note">
+              Double indulgence! Features a crunchy cookie cup glazed with an artisanal dark chocolate interior and rim that slowly melts into your beverage.
+            </p>
+            <div class="flavour-pairings">
+              <h6>Ideal Pairings:</h6>
+              <div class="pairing-tags">
+                <span class="pairing-tag">Espresso</span>
+                <span class="pairing-tag">Affogato</span>
+                <span class="pairing-tag">Celebration Drinks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Banner Pair Showcase Banner (Grounded) -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="p-4 p-md-5 rounded-4 bg-white d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4" style="border: 2px solid var(--c2e-gold-primary); box-shadow: var(--c2e-shadow-grounded);">
+            <div class="d-flex align-items-center gap-4">
+              <img src="assets/images/banner-cups-pair.jpg" alt="Cup2Eat Real Cups on Wooden Board" class="rounded-3" style="max-height: 110px; object-fit: cover; border: 1.5px solid var(--c2e-border-grounded);">
+              <div>
+                <h4 class="mb-1 fw-bold" style="color: var(--c2e-green-dark);">Try All 4 in Our Taster Pack</h4>
+                <p class="mb-0 text-muted">Get a sample box containing all 4 flavours for your home, cafe, or upcoming event catering.</p>
+              </div>
+            </div>
+            <a href="#b2b" class="btn-eco-solid text-nowrap px-4 py-3">
+              <i class="bi bi-box-seam me-2"></i> Request Tasting Kit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       The Plastic Truth vs Cup2Eat (Problem & Solution)
+       =================================================================== -->
+  <section class="section-padding" id="why-edible">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">The Hard Truth</span>
+        <h2 class="section-heading">Why "Paper Cups" Are Not Eco-Friendly</h2>
+        <p class="section-lead">
+          Billions of so-called paper cups end up in landfills every year. Here is why the world urgently needs Cup2Eat.
+        </p>
+      </div>
+
+      <!-- Side-by-side comparison -->
+      <div class="comparison-container">
+        <!-- Conventional Paper / Plastic Cup -->
+        <div class="comparison-box bad">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <i class="bi bi-exclamation-octagon-fill text-danger fs-2"></i>
+            <div>
+              <h3 class="mb-0 fs-4 fw-bold">Traditional "Paper" Cups</h3>
+              <small class="text-danger-emphasis">The Plastic Deception</small>
+            </div>
+          </div>
+          <ul class="comparison-list">
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              <div><strong>Hidden Plastic Lining:</strong> Coated inside with polyethylene (PE) or wax plastic, making them virtually impossible to recycle.</div>
+            </li>
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              <div><strong>Microplastics in Hot Tea:</strong> Lab studies show boiling tea releases over 25,000 microplastic particles into your beverage in 15 minutes.</div>
+            </li>
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              <div><strong>30+ Years in Landfills:</strong> Takes decades to decompose, choking drains, soil, and municipal waste systems.</div>
+            </li>
+            <li>
+              <i class="bi bi-x-circle-fill"></i>
+              <div><strong>Creates Tons of Trash:</strong> Every tapri and cafe generates dozens of black trash bags of soggy cup garbage daily.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cup2Eat Edible Cup -->
+        <div class="comparison-box good">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <i class="bi bi-check-circle-fill text-success fs-2"></i>
+            <div>
+              <h3 class="mb-0 fs-4 fw-bold">Cup2Eat Edible Solution</h3>
+              <small class="text-success-emphasis">Eat Your Drink Revolution</small>
+            </div>
+          </div>
+          <ul class="comparison-list">
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <div><strong>100% Edible & Natural:</strong> Baked from natural food grains, vegetable extracts, and real cocoa/cardamom with zero synthetic additives.</div>
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <div><strong>Zero Microplastics:</strong> Clean, pure, FSSAI certified food-grade composition safe for children, adults, and families.</div>
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <div><strong>40+ Mins Leak Resistance:</strong> Engineered to hold piping hot chai without getting soggy until you are done.</div>
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <div><strong>Zero Landfill Footprint:</strong> Eat the cup as a snack! Even if dropped, it's 100% biodegradable organic food waste.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Interactive Waste Calculator
+       =================================================================== -->
+  <section class="section-padding pt-0" id="calculator">
+    <div class="container">
+      <div class="calculator-card">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-5">
+            <span class="section-pretitle mb-3" style="background: var(--c2e-gold-light); color: var(--c2e-green-dark); border-color: var(--c2e-gold-primary);">INTERACTIVE CALCULATOR</span>
+            <h3 class="calc-title">Calculate Your Eco Impact</h3>
+            <p class="calc-lead">
+              See how many kilograms of toxic plastic and disposable waste your cafe, office, or event can eliminate by switching to Cup2Eat.
+            </p>
+
+            <div class="calc-slider-wrap">
+              <div class="calc-slider-label">
+                <span>Cups served per day:</span>
+                <span class="value-highlight" id="sliderVal">250</span>
+              </div>
+              <input type="range" class="form-range" id="cupSlider" min="50" max="2500" step="50" value="250">
+              <div class="d-flex justify-content-between text-white-50 small mt-1">
+                <span>50 cups</span>
+                <span>1,000 cups</span>
+                <span>2,500 cups</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="calc-results-grid">
+              <div class="calc-result-box">
+                <div class="calc-result-val" id="cupsSavedVal">91,250</div>
+                <span>Paper Cups Saved / Year</span>
+              </div>
+              <div class="calc-result-box">
+                <div class="calc-result-val" id="plasticSavedVal">1,004 kg</div>
+                <span>Plastic Waste Prevented</span>
+              </div>
+              <div class="calc-result-box">
+                <div class="calc-result-val" id="treesSavedVal">31.9 Trees</div>
+                <span>Tree Carbon Equivalent</span>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a href="#b2b" class="btn-eco-solid px-4 py-2">
+                <i class="bi bi-lightning-charge-fill me-1"></i> Make Your Cafe Zero Waste Today
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       For Cafes, Events, Catering & B2B Commercial Supply
+       =================================================================== -->
+  <section class="section-padding b2b-section" id="b2b">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        <!-- Left: Why Cafes Love Cup2Eat -->
+        <div class="col-lg-6">
+          <span class="section-pretitle">B2B & Partnerships</span>
+          <h2 class="section-heading mb-3">Turn Your Beverage Counter Into an Instagram Sensation</h2>
+          <p class="section-lead mb-4">
+            Today's consumers care deeply about sustainability and unforgettable food experiences. Serving your beverages in <strong>Cup2Eat</strong> edible cups gives your brand instant viral word-of-mouth and customer loyalty.
+          </p>
+
+          <div class="b2b-feature-item">
+            <div class="b2b-feature-icon">
+              <i class="bi bi-camera-fill"></i>
+            </div>
+            <div class="b2b-feature-text">
+              <h5>Viral Social Media Magnet</h5>
+              <p>Customers love taking videos of drinking chai and crunching their cups. Expect 4x more organic tags and reels on Instagram and YouTube.</p>
+            </div>
+          </div>
+
+          <div class="b2b-feature-item">
+            <div class="b2b-feature-icon">
+              <i class="bi bi-currency-rupee"></i>
+            </div>
+            <div class="b2b-feature-text">
+              <h5>Higher Average Order Value</h5>
+              <p>Position your specialty teas, coffees, and desserts as a premium combo experience that customers happily pay more for.</p>
+            </div>
+          </div>
+
+          <div class="b2b-feature-item">
+            <div class="b2b-feature-icon">
+              <i class="bi bi-box2-heart-fill"></i>
+            </div>
+            <div class="b2b-feature-text">
+              <h5>Bulk Wholesale & Custom Branding</h5>
+              <p>Available in moisture-sealed master cartons with long shelf life (6-9 months). Custom branded sleeve options for weddings and corporate events.</p>
+            </div>
+          </div>
+
+          <!-- Cafe Lifestyle Photo Preview -->
+          <div class="mt-4 rounded-4 overflow-hidden shadow-lg border border-success border-opacity-25">
+            <img src="assets/images/cafe-lifestyle.jpg" alt="Friends enjoying Cup2Eat at a cafe" class="img-fluid w-100" style="max-height: 230px; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Right: Inquiry / Sample Kit Form -->
+        <div class="col-lg-6" id="contact">
+          <div class="b2b-form-card">
+            <h4>Request Cafe Samples & Wholesale Pricing</h4>
+            <p>Fill in your details below and our team will dispatch a commercial sample kit or discuss wholesale dealership options.</p>
+
+            <form id="sampleInquiryForm">
+              <div class="mb-3">
+                <label for="formName" class="form-label">Full Name / Contact Person *</label>
+                <input type="text" class="form-control" id="formName" placeholder="e.g. Rahul Sharma" required>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="formPhone" class="form-label">WhatsApp / Phone Number *</label>
+                  <input type="tel" class="form-control" id="formPhone" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="formBusiness" class="form-label">Business / Cafe / Event Type</label>
+                  <select class="form-select" id="formBusiness">
+                    <option value="Cafe / Restaurant">Cafe / Restaurant</option>
+                    <option value="Chai Tapri / Tea Franchise">Chai Tapri / Tea Franchise</option>
+                    <option value="Catering & Wedding Event">Catering & Wedding Event</option>
+                    <option value="Corporate Gifting">Corporate Gifting</option>
+                    <option value="Direct Consumer Pack">Direct Consumer / Home Pack</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="formFlavour" class="form-label">Preferred Primary Flavour</label>
+                  <select class="form-select" id="formFlavour">
+                    <option value="All 4 Flavours (Taster Kit)">All 4 Flavours (Taster Kit)</option>
+                    <option value="Royal Elaichi">Royal Elaichi</option>
+                    <option value="Classic Chocolate">Classic Chocolate</option>
+                    <option value="Bourbon Vanilla">Bourbon Vanilla</option>
+                    <option value="Chocolate Coated">Chocolate Coated</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="formQuantity" class="form-label">Estimated Monthly Volume</label>
+                  <select class="form-select" id="formQuantity">
+                    <option value="Sample Box (50 pcs)">Sample Box (50 pcs)</option>
+                    <option value="500 - 2,000 pcs / month">500 - 2,000 pcs / month</option>
+                    <option value="2,000 - 10,000 pcs / month">2,000 - 10,000 pcs / month</option>
+                    <option value="10,000+ pcs (Distributor)">10,000+ pcs (Distributor)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="formCity" class="form-label">City / Delivery Location</label>
+                <input type="text" class="form-control" id="formCity" placeholder="e.g. Mumbai, Delhi, Bengaluru, Pune">
+              </div>
+
+              <button type="submit" class="btn btn-primary-cup w-100 justify-content-center py-3">
+                <i class="bi bi-send-check-fill me-2"></i> Submit Wholesale Inquiry
+              </button>
+
+              <div class="text-center mt-3">
+                <small class="text-muted">
+                  <i class="bi bi-shield-lock-fill text-success me-1"></i> FSSAI Licensed Manufacturer • Fast pan-India shipping
+                </small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Instagram Community & Social Showcase (@cup2eat)
+       =================================================================== -->
+  <section class="section-padding" id="instagram">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">Connect On Instagram</span>
+        <h2 class="section-heading">Join the #EatYourDrink Movement</h2>
+        <p class="section-lead">
+          Follow <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="text-decoration-none fw-bold text-success">@cup2eat</a> on Instagram for daily crunchy chai reels, behind-the-scenes baking, and real customer reactions.
+        </p>
+      </div>
+
+      <div class="row g-3">
+        <!-- Insta Grid Item 1 -->
+        <div class="col-6 col-md-3">
+          <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="insta-gallery-item d-block">
+            <img src="assets/images/flavour-chocolate-coated.jpg" alt="Cup2Eat Instagram Reel">
+            <div class="insta-overlay">
+              <i class="bi bi-instagram"></i>
+              <span>Watch Chocolate Coated Crunch</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Insta Grid Item 2 -->
+        <div class="col-6 col-md-3">
+          <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="insta-gallery-item d-block">
+            <img src="assets/images/banner-cups-pair.jpg" alt="Cup2Eat Chai Ritual">
+            <div class="insta-overlay">
+              <i class="bi bi-instagram"></i>
+              <span>Morning Chai Pairing</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Insta Grid Item 3 -->
+        <div class="col-6 col-md-3">
+          <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="insta-gallery-item d-block">
+            <img src="assets/images/cafe-lifestyle.jpg" alt="Cup2Eat at partner cafes">
+            <div class="insta-overlay">
+              <i class="bi bi-instagram"></i>
+              <span>Partner Cafe Vibe</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Insta Grid Item 4 -->
+        <div class="col-6 col-md-3">
+          <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="insta-gallery-item d-block">
+            <img src="assets/images/flavour-elaichi.jpg" alt="Cup2Eat Elaichi Cup">
+            <div class="insta-overlay">
+              <i class="bi bi-instagram"></i>
+              <span>Royal Elaichi Tapri Stories</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold">
+          <i class="bi bi-instagram text-danger me-2"></i> Follow @cup2eat on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Frequently Asked Questions
+       =================================================================== -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">Got Questions?</span>
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+        <p class="section-lead">Everything you need to know about Cup2Eat edible wafer cups.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion" id="cupFaqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Does the cup become soggy when filled with boiling hot chai or coffee?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#cupFaqAccordion">
+                <div class="accordion-body">
+                  <strong>Not at all!</strong> Cup2Eat cups are precision-baked with a proprietary natural food-grade barrier that resists temperatures up to 95°C. You can sip your hot tea, coffee, or hot chocolate for <strong>40 to 45+ minutes</strong> while the exterior remains pleasantly warm and crunchy.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What are the ingredients? Are they 100% vegetarian and vegan?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#cupFaqAccordion">
+                <div class="accordion-body">
+                  Yes, Cup2Eat is <strong>100% Pure Veg (Green Dot certified)</strong> and <strong>Vegan Friendly</strong>. Our cups are baked using wholesome natural food grains, vegetable oil, dietary plant fibers, and natural flavourings (crushed cardamom, cocoa, vanilla extract). We do not use any animal products, gelatins, or artificial chemical preservatives.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Is Cup2Eat licensed by FSSAI?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#cupFaqAccordion">
+                <div class="accordion-body">
+                  <strong>Yes, absolutely.</strong> Cup2Eat is fully <strong>FSSAI Licensed</strong> in compliance with all Indian Food Safety and Standards Authority hygiene, temperature, and microbiological norms. Every production batch is laboratory-tested.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  What is the shelf life and how should they be stored?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#cupFaqAccordion">
+                <div class="accordion-body">
+                  Cup2Eat cups have an ambient shelf life of <strong>6 to 9 months</strong> from manufacturing. They come packed in airtight, moisture-proof protective packaging. Simply store them in a cool, dry place away from direct sunlight.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Can we order custom branded edible cups for weddings or cafes?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#cupFaqAccordion">
+                <div class="accordion-body">
+                  Yes! We provide custom branded food-grade outer sleeves with your cafe logo or wedding couple monogram, as well as embossing on bulk orders above minimum batch sizes. Reach out through our B2B form or WhatsApp to discuss customizations.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Footer
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="assets/images/logo.png" alt="Cup2Eat Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--c2e-gold-primary);">
+            <h3 class="footer-brand-title mb-0">CUP<span>2</span>EAT</h3>
+          </div>
+          <p class="handwritten fs-4 mb-2" style="color: var(--c2e-gold-rich);">Eat Your Drink</p>
+          <p class="footer-desc">
+            Eco-friendly food for a better tomorrow. Replacing toxic single-use plastic and paper cups with delicious, 100% edible biscuit cups. Small Sip. Big Change.
+          </p>
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white bg-opacity-10 rounded-pill small border" style="border-color: rgba(197, 155, 99, 0.4) !important; color: var(--c2e-gold-light);">
+            <i class="bi bi-patch-check-fill" style="color: var(--c2e-gold-rich);"></i>
+            <span>FSSAI LICENSED FOOD PRODUCT</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#concept">How It Works</a></li>
+            <li><a href="#flavours">Our Flavours</a></li>
+            <li><a href="#why-edible">The Plastic Truth</a></li>
+            <li><a href="#calculator">Eco Calculator</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Flavours -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading">Our Flavours</h5>
+          <ul class="footer-links">
+            <li><a href="#flavours">Royal Elaichi</a></li>
+            <li><a href="#flavours">Classic Chocolate</a></li>
+            <li><a href="#flavours">Bourbon Vanilla</a></li>
+            <li><a href="#flavours">Chocolate Coated</a></li>
+            <li><a href="#b2b">Sample Taster Kit</a></li>
+            <li><a href="#b2b">Custom Cafe Sleeves</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Social -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">Connect With Us</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Manufacturing & Pan-India Distribution Hub</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-instagram"></i>
+            <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
+              @cup2eat on Instagram
+            </a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span>hello@cup2eat.com (Wholesale & Franchise)</span>
+          </div>
+
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/cup2eat?exln=MWEzOGlvaWk5OTZ2bQ==" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#contact" class="social-icon-btn" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="#hero" class="social-icon-btn" aria-label="Share">
+              <i class="bi bi-share-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Cup2Eat. All Rights Reserved. Crafted for a greener planet.
+        </div>
+        <div class="d-flex gap-3">
+          <span>Say No To Plastic</span>
+          <span>•</span>
+          <span>Choose Edible</span>
+          <span>•</span>
+          <span>Pure Veg</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Submission Toast Notification -->
+  <div class="custom-toast" id="customToast">
+    <i class="bi bi-check-circle-fill text-warning fs-4"></i>
+    <div>
+      <h6 class="mb-0 fw-bold">Request Received!</h6>
+      <small id="toastMessage">Thank you! We will get in touch shortly.</small>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

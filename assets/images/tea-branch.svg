@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 380" fill="none">
+  <defs>
+    <!-- Leaf Gradients (Rich authentic tea green matching Cup2Eat standee banner) -->
+    <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#236e46"/>
+      <stop offset="45%" stop-color="#14462c"/>
+      <stop offset="100%" stop-color="#0a2b1b"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2f8456"/>
+      <stop offset="60%" stop-color="#185234"/>
+      <stop offset="100%" stop-color="#0c3220"/>
+    </linearGradient>
+    <linearGradient id="leafGrad3" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#3f9664"/>
+      <stop offset="70%" stop-color="#1b5637"/>
+      <stop offset="100%" stop-color="#0e3623"/>
+    </linearGradient>
+    <!-- Stem Gradient -->
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a6644"/>
+      <stop offset="100%" stop-color="#0c2d1c"/>
+    </linearGradient>
+    <!-- Gold Vein Highlight -->
+    <linearGradient id="goldVein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2b97c" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#c89d66" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clear, solid, rich color representation (100% opacity, no washed-out fade) -->
+  <g opacity="1">
+    <!-- Main curving tea branch stem -->
+    <path d="M-10, -10 Q60, 80 110, 190 Q145, 275 185, 340" stroke="url(#stemGrad)" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+    <!-- Leaf 1 (Top Left, large curving leaf) -->
+    <path d="M20, 25 C60, 5 130, 20 165, 75 C135, 115 65, 105 20, 25 Z" fill="url(#leafGrad1)"/>
+    <path d="M20, 25 Q95, 60 165, 75" stroke="url(#goldVein)" stroke-width="2" fill="none"/>
+    <path d="M55, 42 Q75, 35 105, 38" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+    <path d="M80, 53 Q110, 50 135, 58" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+    <path d="M65, 47 Q85, 65 110, 80" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+
+    <!-- Leaf 2 (Upper right branch) -->
+    <path d="M80, 130 C135, 95 195, 110 230, 155 C190, 195 125, 185 80, 130 Z" fill="url(#leafGrad2)"/>
+    <path d="M80, 130 Q160, 145 230, 155" stroke="url(#goldVein)" stroke-width="2" fill="none"/>
+    <path d="M120, 137 Q150, 125 180, 128" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+    <path d="M145, 142 Q180, 138 205, 145" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+    <path d="M135, 140 Q160, 160 185, 175" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+
+    <!-- Leaf 3 (Middle left downward leaf) -->
+    <path d="M105, 180 C80, 220 50, 275 80, 310 C125, 290 140, 230 105, 180 Z" fill="url(#leafGrad1)"/>
+    <path d="M105, 180 Q95, 250 80, 310" stroke="url(#goldVein)" stroke-width="2" fill="none"/>
+    <path d="M102, 215 Q80, 235 70, 260" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+    <path d="M98, 245 Q82, 265 78, 285" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+    <path d="M100, 230 Q115, 250 120, 275" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+
+    <!-- Leaf 4 (Lower tender fresh tea bud and leaf) -->
+    <path d="M145, 275 C195, 260 250, 285 275, 335 C230, 355 175, 335 145, 275 Z" fill="url(#leafGrad3)"/>
+    <path d="M145, 275 Q215, 305 275, 335" stroke="url(#goldVein)" stroke-width="1.8" fill="none"/>
+    <path d="M180, 290 Q210, 285 235, 295" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+    <path d="M195, 298 Q225, 320 245, 335" stroke="url(#goldVein)" stroke-width="1.2" fill="none"/>
+
+    <!-- Tender tip bud -->
+    <path d="M185, 340 C195, 355 205, 368 215, 375 C205, 370 190, 360 185, 340 Z" fill="#2d7a50"/>
+  </g>
+</svg>

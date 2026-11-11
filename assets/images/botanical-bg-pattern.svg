@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" fill="none">
+  <!-- Subtle Delicate Tea Leaves & Eco Grain Pattern for Cup2Eat -->
+  <g stroke="#a07436" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.12">
+    <!-- Tea leaf pair 1 (Top Left) -->
+    <path d="M40, 60 C75, 35 110, 48 128, 85 C100, 108 65, 98 40, 60 Z"/>
+    <path d="M40, 60 Q85, 75 128, 85" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M128, 85 C160, 60 195, 72 210, 110 C182, 132 150, 122 128, 85 Z"/>
+    <path d="M128, 85 Q170, 98 210, 110" stroke-width="0.8" stroke-dasharray="3 3"/>
+
+    <!-- Delicate Cardamom pod (Elaichi) motif (Top Right) -->
+    <path d="M330, 60 C352, 40 380, 55 386, 88 C380, 120 352, 132 330, 110 C314, 88 314, 76 330, 60 Z"/>
+    <path d="M330, 60 Q358, 85 386, 88" stroke-width="0.7"/>
+    <path d="M330, 110 Q358, 85 380, 55" stroke-width="0.7"/>
+
+    <!-- Tea sprig 2 (Center Right) -->
+    <path d="M280, 230 C312, 202 355, 218 372, 256 C338, 284 300, 272 280, 230 Z"/>
+    <path d="M280, 230 Q328, 245 372, 256" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M280, 230 Q258, 262 235, 305" stroke-width="1.3"/>
+    <path d="M235, 305 C212, 338 235, 370 268, 376 C290, 348 278, 316 235, 305 Z"/>
+    <path d="M235, 305 Q252, 340 268, 376" stroke-width="0.8" stroke-dasharray="3 3"/>
+
+    <!-- Wheat / Baked Grain Sprig (Lower Left) -->
+    <path d="M50, 360 Q85, 305 118, 260" stroke-width="1.3"/>
+    <!-- Grain kernels -->
+    <path d="M72, 322 C66, 311 77, 305 85, 314 C83, 322 77, 325 72, 322 Z"/>
+    <path d="M92, 295 C86, 284 97, 278 105, 287 C103, 295 97, 298 92, 295 Z"/>
+    <path d="M112, 268 C106, 257 117, 251 125, 260 C123, 268 117, 271 112, 268 Z"/>
+
+    <!-- Delicate aroma & leaf contours (Center Left) -->
+    <path d="M70, 170 C95, 150 120, 160 132, 185 C110, 202 85, 195 70, 170 Z"/>
+    <path d="M70, 170 Q102, 180 132, 185" stroke-width="0.7" stroke-dasharray="3 2"/>
+
+    <!-- Organic botanical seed dots -->
+    <circle cx="230" cy="70" r="1.8" fill="#a07436" stroke="none"/>
+    <circle cx="242" cy="64" r="1.2" fill="#a07436" stroke="none"/>
+    <circle cx="160" cy="225" r="1.8" fill="#a07436" stroke="none"/>
+    <circle cx="395" cy="335" r="1.8" fill="#a07436" stroke="none"/>
+    <circle cx="45" cy="220" r="1.5" fill="#a07436" stroke="none"/>
+  </g>
+</svg>
+
